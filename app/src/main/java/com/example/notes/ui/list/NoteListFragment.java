@@ -16,24 +16,30 @@ import com.example.notes.R;
 import com.example.notes.domain.Note;
 import com.example.notes.domain.NotesRepository;
 import com.example.notes.domain.NotesRepositoryImpl;
+import com.example.notes.ui.PublisherHolder;
+import com.example.notes.ui.details.Publisher;
 
 import java.util.List;
 
 public class NoteListFragment extends Fragment {
 
     private NotesRepository notesRepository;
+    private OnNoteCliked onNoteCliked;
+    private Publisher publisher;
 
     public interface OnNoteCliked{
         void onNoteCliked(Note note);
     }
-
-    private OnNoteCliked onNoteCliked;
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         if (context instanceof OnNoteCliked){
             onNoteCliked = (OnNoteCliked) context;
+        }
+
+        if (context instanceof PublisherHolder){
+            publisher = ((PublisherHolder) context).getPublisher();
         }
     }
 
@@ -70,6 +76,9 @@ public class NoteListFragment extends Fragment {
                 public void onClick(View v) {
                     if (onNoteCliked != null){
                         onNoteCliked.onNoteCliked(note);
+                    }
+                    if (publisher != null){
+                        publisher.notify(note);
                     }
                 }
             });

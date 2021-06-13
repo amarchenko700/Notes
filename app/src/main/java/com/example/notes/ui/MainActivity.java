@@ -10,9 +10,12 @@ import com.example.notes.R;
 import com.example.notes.domain.Note;
 import com.example.notes.ui.details.NoteDetailsActivity;
 import com.example.notes.ui.details.NoteDetailsFragment;
+import com.example.notes.ui.details.Publisher;
 import com.example.notes.ui.list.NoteListFragment;
 
-public class MainActivity extends AppCompatActivity implements NoteListFragment.OnNoteCliked {
+public class MainActivity extends AppCompatActivity implements NoteListFragment.OnNoteCliked, PublisherHolder {
+
+    private Publisher publisher = new Publisher();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +37,10 @@ public class MainActivity extends AppCompatActivity implements NoteListFragment.
             intent.putExtra(NoteDetailsActivity.ARG_NOTE, note);
             startActivity(intent);
         }
+    }
+
+    @Override
+    public Publisher getPublisher() {
+        return publisher;
     }
 }
