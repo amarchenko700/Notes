@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Notes</string>
+    <string name="НазваниеЗаметка1">Название заметки 1</string>
+    <string name="НазваниеЗаметка2">Название заметки 2</string>
+    <string name="НазваниеЗаметка3">Название заметки 3</string>
+    <string name="НазваниеЗаметка4">Название заметки 4</string>
+    <string name="НазваниеЗаметка5">Название заметки 5</string>
+    <string name="Заметка1">Текст заметки 1</string>
+    <string name="Заметка2">Текст заметки 2</string>
+    <string name="Заметка3">Текст заметки 3</string>
+    <string name="Заметка4">Текст заметки 4</string>
+    <string name="Заметка5">Текст заметки 5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="note_name">Название заметки</string>
+    <string name="note_description">Текст заметки</string>
 </resources>
