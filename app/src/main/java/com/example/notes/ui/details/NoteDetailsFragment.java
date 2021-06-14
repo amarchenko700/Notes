@@ -47,10 +47,12 @@ public class NoteDetailsFragment extends Fragment implements Observer {
         super.onViewCreated(view, savedInstanceState);
         TextView noteName = view.findViewById(R.id.note_name);
         TextView noteDescription = view.findViewById(R.id.note_detail);
+        TextView noteDateCreated = view.findViewById(R.id.note_dateCreated);
 
         Note note = getArguments().getParcelable(ARG_NOTE);
         noteName.setText(note.getName());
         noteDescription.setText(note.getDescription());
+        noteDateCreated.setText(note.getDateCreated().toString());
     }
 
     @Override

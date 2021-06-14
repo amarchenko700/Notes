@@ -9,7 +9,7 @@ public class Note implements Parcelable {
     private final int name, description;
     private final Date dateCreated;
 
-    protected Note(int name, int description) {
+    protected Note(int description, int name) {
         this.name = name;
         this.description = description;
         dateCreated = new Date();

@@ -58,14 +58,17 @@ public class NoteListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        // 01:05:57 для создания списка устанавливаем фрагменту View
         return inflater.inflate(R.layout.fragment_notes_list, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        // 01:10:53 после предоставления вьюхи в методе onCreateView вызывается данный метод
         super.onViewCreated(view, savedInstanceState);
 
         LinearLayout notesList = view.findViewById(R.id.notes_list_container);
+        // 01:14:05
         List<Note> notes = notesRepository.getNotes();
 
         for (Note note: notes){

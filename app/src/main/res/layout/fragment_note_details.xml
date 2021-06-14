@@ -12,7 +12,33 @@
         android:layout_height="wrap_content"
         tools:text="@string/note_name"
         android:gravity="center"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/dateCreated"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textSize="@dimen/sizeTextDateCreated">
+        </TextView>
+
+        <TextView
+            android:id="@+id/note_dateCreated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textSize="@dimen/sizeTextDateCreated">
+        </TextView>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/note_detail"
